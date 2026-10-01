@@ -416,3 +416,150 @@ ul { padding: 0; list-style: none; }
   line-height: 1.5;
   letter-spacing: .01em;
 }
+
+/* Keep the desktop layout while allowing for classic scrollbar width. */
+@media (min-width: 1200px) {
+  /* Accommodate a non-overlay vertical scrollbar at a 1200px window. */
+  body { min-width: min(1200px, 100%); }
+  .facility-strip { max-width: 100%; }
+}
+
+@media (max-width: 1199px) {
+  html, body { max-width: 100%; overflow-x: clip; }
+  body { min-width: 0; }
+  .container { width: min(970px, calc(100% - 48px)); }
+  .header-inner { width: calc(100% - 48px); }
+  .hours-table-wrap { max-width: 100%; overflow-x: auto; }
+  .hours-table { min-width: 700px; }
+  .facility-strip { width: calc(100% - 48px); }
+  .staff-lead { width: 100%; }
+  .site-footer { height: auto; min-height: 67px; padding: 14px 24px; }
+  .site-footer p { width: 100%; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .site-header { height: auto; min-height: 92px; }
+  .header-inner { height: auto; min-height: 92px; gap: 20px; }
+  .global-nav {
+    flex: 1 1 500px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 2px 18px;
+    font-size: 14px;
+  }
+  .hero { height: clamp(400px, 49vw, 596px); }
+  .hero-copy { top: 25%; width: min(550px, 75%); font-size: clamp(52px, 6.2vw, 74px); }
+  .facility-strip { height: clamp(150px, 19vw, 224px); gap: 14px; }
+  .split-news { grid-template-columns: minmax(230px, 34%) minmax(0, 1fr); gap: 36px; }
+  .news-photo { height: clamp(360px, 48vw, 535px); }
+  .director-grid { grid-template-columns: minmax(0, 36%) minmax(0, 1fr); gap: 36px; }
+  .director-photo { width: 100%; height: auto; aspect-ratio: 345 / 374; }
+  .roman-name { font-size: clamp(26px, 3.2vw, 38px); }
+  .medical-row, .staff-row { grid-template-columns: minmax(0, 38%) minmax(0, 1fr); gap: 32px; min-height: 0; }
+  .medical-row.reverse, .staff-row.reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 38%); }
+  .medical-row figure, .staff-row figure { width: 100%; height: auto; aspect-ratio: 1; }
+  .medical-row h3, .staff-row h3 { font-size: 20px; }
+  .about-grid { grid-template-columns: minmax(0, 38%) minmax(0, 1fr); gap: 36px; }
+  .about figure { width: 100%; height: auto; aspect-ratio: 1; }
+  .access-grid { grid-template-columns: minmax(0, 52%) minmax(0, 1fr); gap: 32px; }
+  .map { width: 100%; height: auto; aspect-ratio: 500 / 410; }
+}
+
+@media (max-width: 767px) {
+  .container { width: calc(100% - 36px); }
+  .site-header { height: auto; padding: 12px 0; }
+  .header-inner {
+    width: calc(100% - 32px);
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .logo { width: 150px; height: 45px; }
+  .global-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 2px 6px;
+    font-size: 12px;
+    text-align: center;
+    white-space: normal;
+  }
+  .global-nav a { min-width: 0; padding: 5px 1px; line-height: 1.4; overflow-wrap: anywhere; }
+  .hero { height: clamp(300px, 88vw, 430px); }
+  .hero-copy { top: 25%; right: 0; width: 100%; font-size: clamp(38px, 10vw, 58px); }
+  .hero-copy span { padding: 1px 12px 5px 16px; }
+  .hero-copy span + span { margin-top: 7px; }
+  .section-tight { padding: 46px 0 42px; }
+  .section-block { padding: 52px 0; }
+  .section-title { font-size: 25px; margin-bottom: 36px; }
+  .hours-table { min-width: 680px; }
+  .hours-table-wrap { width: 100%; overscroll-behavior-x: contain; }
+  .hours-notes { overflow-wrap: anywhere; }
+  .facility-strip {
+    width: calc(100% - 36px);
+    height: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .facility-strip figure { aspect-ratio: 1; border-radius: 9px; }
+  .news { padding-top: 58px; padding-bottom: 62px; }
+  .split-news { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .news-photo { width: min(100%, 315px); height: auto; aspect-ratio: 315 / 420; margin: 0 auto; }
+  .news-content { padding-top: 0; }
+  .news-content h2 { font-size: 26px; margin-bottom: 16px; }
+  .news-list li { min-height: 48px; font-size: 13px; }
+  .news-content .button { float: none; margin: 22px 0 0 auto; }
+  .director { padding: 58px 0; }
+  .director-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .director-photo-wrap { width: min(100%, 300px); margin: 0 auto; }
+  .director-photo { width: 100%; height: auto; aspect-ratio: 345 / 374; }
+  .roman-name { margin-top: 18px; font-size: 30px; }
+  .director-copy h2 { font-size: 26px; margin-bottom: 18px; }
+  .director-copy p { font-size: 14px; }
+  .director-copy p + p { margin-top: 14px; }
+  .medical { padding-top: 62px; padding-bottom: 58px; }
+  .medical .section-title { margin-bottom: 38px; }
+  .medical-row, .medical-row.reverse, .staff-row, .staff-row.reverse {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    min-height: 0;
+    margin-bottom: 40px;
+  }
+  .medical-row figure, .staff-row figure {
+    order: 0;
+    width: min(100%, 350px);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+  }
+  .medical-row.reverse figure, .staff-row.reverse figure { order: 0; }
+  .medical-row div, .medical-row.reverse div,
+  .staff-row div, .staff-row.reverse div { order: 0; text-align: left; }
+  .medical-row h3, .staff-row h3 { font-size: 20px; margin-bottom: 13px; }
+  .medical-row p, .staff-row p { font-size: 14px; }
+  .medical-more { justify-content: center; margin-top: 0; }
+  .about { padding: 52px 0; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .about figure { width: min(100%, 350px); height: auto; aspect-ratio: 1; margin: 0 auto; }
+  .about h2 { font-size: 26px; margin-bottom: 16px; }
+  .about .button { float: none; margin: 22px 0 0 auto; min-width: min(250px, 100%); }
+  .staff { padding-top: 58px; padding-bottom: 52px; }
+  .staff .section-title { margin-bottom: 28px; }
+  .staff-lead { margin-bottom: 40px; }
+  .access { padding-top: 54px; padding-bottom: 48px; }
+  .access .section-title { margin-bottom: 34px; }
+  .access-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .map { width: 100%; height: auto; aspect-ratio: 500 / 410; }
+  .access-copy { padding-top: 0; overflow-wrap: anywhere; }
+  .access-copy h3 { font-size: 20px; margin-bottom: 12px; }
+  .access-copy h3:nth-of-type(2) { margin-top: 24px; }
+  .hours-bottom { margin-top: 44px; }
+  .departments { padding-top: 50px; }
+  .departments .section-title { margin-bottom: 24px; }
+  .departments li { font-size: 15px; line-height: 2; }
+  .departments p { overflow-wrap: anywhere; }
+  .site-footer { padding: 14px 18px; }
+  .site-footer p { font-size: 10px; }
+  .button { max-width: 100%; }
+}
