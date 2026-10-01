@@ -57,6 +57,7 @@ ul { padding: 0; list-style: none; }
   white-space: nowrap;
 }
 .global-nav a { padding: 8px 0; }
+.menu-toggle { display: none; }
 
 .hero {
   position: relative;
@@ -467,25 +468,53 @@ ul { padding: 0; list-style: none; }
 
 @media (max-width: 767px) {
   .container { width: calc(100% - 36px); }
-  .site-header { height: auto; padding: 12px 0; }
+  .site-header { position: relative; z-index: 10; height: auto; padding: 12px 0; }
   .header-inner {
     width: calc(100% - 32px);
     height: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
   }
   .logo { width: 150px; height: 45px; }
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+    padding: 10px 8px;
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--green);
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .menu-open .menu-toggle span:first-child { transform: translateY(7px) rotate(45deg); }
+  .menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .menu-open .menu-toggle span:last-child { transform: translateY(-7px) rotate(-45deg); }
   .global-nav {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
     width: 100%;
-    gap: 2px 6px;
-    font-size: 12px;
-    text-align: center;
+    padding: 8px 16px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 14%);
+    font-size: 15px;
+    text-align: left;
     white-space: normal;
   }
-  .global-nav a { min-width: 0; padding: 5px 1px; line-height: 1.4; overflow-wrap: anywhere; }
+  .menu-open .global-nav { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .global-nav a { min-width: 0; padding: 10px 2px; line-height: 1.4; overflow-wrap: anywhere; border-bottom: 1px solid #e5e5e5; }
+  .global-nav a:last-child { border-bottom: 0; }
   .hero { height: clamp(300px, 88vw, 430px); }
   .hero-copy { top: 25%; right: 0; width: 100%; font-size: clamp(38px, 10vw, 58px); }
   .hero-copy span { padding: 1px 12px 5px 16px; }
