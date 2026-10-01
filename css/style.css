@@ -537,10 +537,21 @@ ul { padding: 0; list-style: none; }
   .facility-strip {
     width: calc(100% - 36px);
     height: auto;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
-  .facility-strip figure { aspect-ratio: 1; border-radius: 9px; }
+  .facility-strip::-webkit-scrollbar { display: none; }
+  .facility-strip figure {
+    flex: 0 0 100%;
+    aspect-ratio: 1;
+    border-radius: 9px;
+    scroll-snap-align: start;
+  }
   .news { padding-top: 58px; padding-bottom: 62px; }
   .split-news { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .news-photo { display: none; }
