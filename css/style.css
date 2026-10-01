@@ -522,8 +522,17 @@ ul { padding: 0; list-style: none; }
   .section-tight { padding: 46px 0 42px; }
   .section-block { padding: 52px 0; }
   .section-title { font-size: 25px; margin-bottom: 36px; }
-  .hours-table { min-width: 680px; }
-  .hours-table-wrap { width: 100%; overscroll-behavior-x: contain; }
+  .hours-table { width: 100%; min-width: 0; table-layout: fixed; }
+  .hours-table-wrap { width: 100%; overflow-x: visible; }
+  .hours-table th,
+  .hours-table td { height: 32px; padding: 4px 1px; font-size: 11px; line-height: 1.25; white-space: nowrap; }
+  .hours-table thead th:first-child,
+  .hours-table tbody th { width: 104px; }
+  .hours-table thead th:first-child { font-size: 18px; letter-spacing: 0; }
+  .hours-table thead th { font-size: 14px; letter-spacing: 0; }
+  .hours-table tbody th { font-size: 10px; }
+  .hours-table tbody th span { display: block; margin-left: 0; font-size: 14px; white-space: nowrap; }
+  .hours-table td { font-size: 14px; }
   .hours-notes { overflow-wrap: anywhere; }
   .facility-strip {
     width: calc(100% - 36px);
