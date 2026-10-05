@@ -1089,6 +1089,7 @@ ul {
   .news-content h2 {
     font-size: 26px;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   .news-list li {
@@ -1138,6 +1139,7 @@ ul {
   .director-copy h2 {
     font-size: 26px;
     margin-bottom: 18px;
+    text-align: center;
   }
 
   .director-copy p {
@@ -1224,6 +1226,7 @@ ul {
   .about h2 {
     font-size: 26px;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   .about .button {
