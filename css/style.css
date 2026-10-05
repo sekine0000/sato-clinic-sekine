@@ -563,6 +563,25 @@ ul {
   border-radius: 12px;
 }
 
+#staff .staff-row:nth-of-type(1) figure img {
+  object-position: 90% 50%;
+  transform: scale(1.2);
+}
+
+#staff .staff-row:nth-of-type(2) figure img {
+  object-position: 100% 50%;
+}
+
+#staff .staff-row:nth-of-type(3) figure img {
+  object-position: 40% 50%;
+}
+
+#staff .staff-row:nth-of-type(4) figure img {
+  object-position: 0% 50%;
+  transform: scale(1.2);
+  transform-origin: left top;
+}
+
 .staff-row h3 {
   font-size: 22px;
   font-weight: 500;
