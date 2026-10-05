@@ -112,7 +112,8 @@ ul {
 
 .hero-copy {
   position: absolute;
-  top: 166px;
+  top: auto;
+  bottom: 35px;
   right: 0;
   width: 550px;
   font-size: 74px;
@@ -786,7 +787,8 @@ ul {
   }
 
   .hero-copy {
-    top: 25%;
+    top: auto;
+    bottom: 30px;
     width: min(550px, 75%);
     font-size: clamp(52px, 6.2vw, 74px);
   }
@@ -961,7 +963,8 @@ ul {
   }
 
   .hero-copy {
-    top: 25%;
+    top: auto;
+    bottom: 20px;
     right: 0;
     width: 100%;
     font-size: clamp(38px, 10vw, 58px);
