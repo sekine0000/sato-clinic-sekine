@@ -1229,11 +1229,24 @@ ul {
     gap: 24px;
   }
 
+  .about-grid > div {
+    display: contents;
+  }
+
+  .about h2 {
+    order: 1;
+  }
+
   .about figure {
+    order: 2;
     width: min(100%, 350px);
     height: auto;
     aspect-ratio: 1;
     margin: 0 auto;
+  }
+
+  .about p {
+    order: 3;
   }
 
   .about h2 {
@@ -1243,6 +1256,7 @@ ul {
   }
 
   .about .button {
+    order: 4;
     display: flex;
     float: none;
     margin: 22px 0 0 auto;
