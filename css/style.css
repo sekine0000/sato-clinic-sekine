@@ -1117,12 +1117,17 @@ ul {
 
   .director-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
+    gap: 0;
+  }
+
+  .director-copy {
+    display: contents;
   }
 
   .director-photo-wrap {
     width: min(100%, 300px);
     margin: 0 auto;
+    order: 2;
   }
 
   .director-photo {
@@ -1139,6 +1144,15 @@ ul {
     font-size: 26px;
     margin-bottom: 18px;
     text-align: center;
+    order: 1;
+  }
+
+  .director-copy > p {
+    order: 3;
+  }
+
+  .director-copy > p:first-of-type {
+    margin-top: 28px;
   }
 
   .director-copy p {
