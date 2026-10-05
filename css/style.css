@@ -496,6 +496,10 @@ ul {
   border-radius: 12px;
 }
 
+.about figure img {
+  object-position: 100% 50%;
+}
+
 .about h2 {
   font-size: 30px;
   font-weight: 500;
