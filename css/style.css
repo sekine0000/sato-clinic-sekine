@@ -1132,8 +1132,7 @@ ul {
   }
 
   .roman-name {
-    margin-top: 18px;
-    font-size: 30px;
+    display: none;
   }
 
   .director-copy h2 {
