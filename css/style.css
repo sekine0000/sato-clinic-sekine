@@ -1211,6 +1211,95 @@ ul {
     margin-bottom: 13px;
   }
 
+  .medical-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+    min-height: 0;
+    margin-bottom: 32px;
+  }
+
+  .medical-row.reverse {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .medical-row figure {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0;
+  }
+
+  .medical-row > div {
+    display: contents;
+  }
+
+  .medical-row h3 {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin: 0;
+    text-align: center;
+  }
+
+  .medical-row p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .medical-row.reverse figure {
+    grid-column: 2;
+  }
+
+  .medical-row.reverse h3 {
+    grid-column: 1;
+  }
+
+  .staff-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+    min-height: 0;
+    margin-bottom: 32px;
+  }
+
+  .staff-row.reverse {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .staff-row figure {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0;
+  }
+
+  .staff-row > div {
+    display: contents;
+  }
+
+  .staff-row h3 {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin: 0;
+    text-align: center;
+  }
+
+  .staff-row p {
+    grid-column: 1 / -1;
+  }
+
+  .staff-row.reverse figure {
+    grid-column: 2;
+  }
+
+  .staff-row.reverse h3 {
+    grid-column: 1;
+  }
+
   .medical-row p,
   .staff-row p {
     font-size: 14px;
