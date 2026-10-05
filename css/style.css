@@ -520,7 +520,7 @@ ul {
 
 .staff {
   padding-top: 96px;
-  padding-bottom: 88px;
+  padding-bottom: 45px;
 }
 
 .staff .section-title {
@@ -612,7 +612,7 @@ ul {
 }
 
 .access {
-  padding-top: 86px;
+  padding-top: 45px;
   padding-bottom: 72px;
 }
 
@@ -1231,7 +1231,7 @@ ul {
 
   .staff {
     padding-top: 58px;
-    padding-bottom: 52px;
+    padding-bottom: 15px;
   }
 
   .staff .section-title {
@@ -1242,8 +1242,12 @@ ul {
     margin-bottom: 40px;
   }
 
+  .staff-row:last-child {
+    margin-bottom: 10;
+  }
+
   .access {
-    padding-top: 54px;
+    padding-top: 15px;
     padding-bottom: 48px;
   }
 
