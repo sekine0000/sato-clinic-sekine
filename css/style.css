@@ -208,6 +208,7 @@ ul { padding: 0; list-style: none; }
 .button span { font-size: 21px; line-height: 1; transform: translateY(-1px); }
 .button-green { color: #fff; background: var(--button); }
 .button-white { color: #63b589; background: #fff; }
+.news-content .button, .medical-more .button, .about .button { width: 290px; }
 .news-content .button {
   float: right;
   margin-top: 31px;
@@ -558,7 +559,12 @@ ul { padding: 0; list-style: none; }
   .news-content { padding-top: 0; }
   .news-content h2 { font-size: 26px; margin-bottom: 16px; }
   .news-list li { min-height: 48px; font-size: 13px; }
-  .news-content .button { float: none; margin: 22px 0 0 auto; }
+  .news-content .button { display: flex; float: none; margin: 22px 0 0 auto; }
+  .news-content .button, .medical-more .button, .about .button {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
   .director { padding: 58px 0; }
   .director-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .director-photo-wrap { width: min(100%, 300px); margin: 0 auto; }
@@ -587,12 +593,12 @@ ul { padding: 0; list-style: none; }
   .staff-row div, .staff-row.reverse div { order: 0; text-align: left; }
   .medical-row h3, .staff-row h3 { font-size: 20px; margin-bottom: 13px; }
   .medical-row p, .staff-row p { font-size: 14px; }
-  .medical-more { justify-content: center; margin-top: 0; }
+  .medical-more { justify-content: flex-end; margin-top: 0; }
   .about { padding: 52px 0; }
   .about-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .about figure { width: min(100%, 350px); height: auto; aspect-ratio: 1; margin: 0 auto; }
   .about h2 { font-size: 26px; margin-bottom: 16px; }
-  .about .button { float: none; margin: 22px 0 0 auto; min-width: min(250px, 100%); }
+  .about .button { display: flex; float: none; margin: 22px 0 0 auto; }
   .staff { padding-top: 58px; padding-bottom: 52px; }
   .staff .section-title { margin-bottom: 28px; }
   .staff-lead { margin-bottom: 40px; }
