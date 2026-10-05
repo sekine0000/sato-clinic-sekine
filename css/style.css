@@ -129,6 +129,7 @@ ul {
   margin-left: auto;
   padding: 1px 20px 6px 23px;
   background: rgba(8, 143, 75, .82);
+  border-radius: 13px;
 }
 
 .hero-copy span+span {
